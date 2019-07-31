@@ -1,0 +1,96 @@
+#include<iostream>
+#include<strings.h>
+#include<conio.h>
+#include<iomanip>
+using namespace std;
+
+struct reference
+{
+	char Author[30];
+	char Title[70];
+	char Publisher[40];
+	char Date[10];
+	char citation[20];
+	int serial;
+}
+
+p[20];
+ int main()
+ {
+ 	int password = 0000;
+ 	int input, n, i;
+ 	
+ 	
+ 	while (true)
+ 	{
+ 	cout<<"Input your Four Digit Password..."<<endl;
+ 	cin>>input;
+ 	
+ 	if ((password)==input)
+ 	{
+ 		cout<<"WELCOME YOU MAY PROCEED...\n"<<endl;
+ 		cout<<"THIS IS A PROGRAM THAT DISPLAYS LIST OF REFERENCES, USING THE SIST 02 STYLE\n"<<endl;
+ 		
+ 		cout<<"How many References do you wish to generate\n"<<endl;
+ 		cin>>n;
+ 		
+		 for(i=0; i<n; ++i) 
+		 {
+		 	cout<<"=>  Input the Detail of the reference\n"<<endl;
+		 	p[i].serial = i+1;
+		 	cout<<"Reference Number "<<	p[i].serial<<endl;
+		 	cout<<endl;
+		 	
+		 	cout<<"Input Authors Name"<<endl;
+		 	cin>>p[i].Author;
+		 	
+		 	cout<<"Input Book Title"<<endl;
+		 	cin>>p[i].Title;
+		 	
+		 	cout<<"Input Book Publisher"<<endl;
+		 	cin>>p[i].Publisher;
+		 	
+		 	cout<<"Input Publication Date"<<endl;
+		 	cin>>p[i].Date;
+		 	
+		 	cout<<"Input The Book Citation"<<endl;
+		 	cin>>p[i].citation;
+		 
+		 }
+		 
+		 system ("cls");
+		 
+		 cout<<"THIS IS A PROGRAM THAT DISPLAYS LIST OF REFERENCES, USING THE SIST 02 STYLE\n"<<endl;
+		 cout<<"THE DETAIL FOR REFERENCING INPUTED ARE:  "<<endl;
+		 for(i=0; i<n; ++i)
+		 {
+		 	cout<<"--------------------------------------------------------------------------"<<endl;
+		 	cout<<"Reference Number   "<<p[i].serial<<endl;
+		 	cout<<"Authors Name :     "<<p[i].Author<<endl;
+		 	cout<<"Book Title :       "<<p[i].Title<<endl;
+		 	cout<<"Book Publisher :   "<<p[i].Publisher<<endl;
+		 	cout<<"Publication Date : "<<p[i].Date<<endl;
+			cout<<"Book Citation :    "<<p[i].citation<<endl;
+			cout<<endl; 
+			cout<<"--------------------------------------------------------------------------"<<endl;
+			
+		 }
+		 
+		 cout<<"THE REFERENCES FOR THE INPUT ARE : "<<endl;
+		for(i=0; i<n; ++i)
+		{
+		cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;	
+		cout<<p[i].serial<<"=> "<<p[i].Author<<". "<<p[i].Title<<", "<<p[i].Publisher<<","<<p[i].Date<<", "<<p[i].citation<<endl;	
+		cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+		}
+	 }
+	 else
+	 {
+	 	cout<<"WRONG PASSWORD TRY AGAIN \n"<<endl;
+	 	continue;
+	 }
+	 return 0;
+	}
+	
+ }
+ 
